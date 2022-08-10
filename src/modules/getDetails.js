@@ -26,7 +26,7 @@ const getDetails = async (ID) => {
     }
     return [title, imageSrc, ingredients, quantities, instructions];
   } catch (err) {
-    console.error(err);
+    return console.error(err);
   }
 };
 

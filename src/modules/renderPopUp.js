@@ -1,5 +1,3 @@
-import getComments from './getComments';
-
 const renderPopUp = (ID, data) => {
   // variables from API -------------------------
   const title = data[0];
