@@ -1,12 +1,12 @@
-import getComments from "./getComments";
+import getComments from './getComments';
 
 const renderPopUp = (ID, data) => {
   // variables from API -------------------------
-  const title = data[0]
-  const imageSrc = data[1]
-  const ingredients = data[2] //array
-  const quantities = data[3] //array
-  const instructions = data[4]
+  const title = data[0];
+  const imageSrc = data[1];
+  const ingredients = data[2]; // array
+  const quantities = data[3]; // array
+  const instructions = data[4];
   // const comments = getComments(ID); //array -- next part of project
 
   // start creating html -------------------------
@@ -18,7 +18,7 @@ const renderPopUp = (ID, data) => {
   const modal = `
   <div class="modal">
   <h2>${title}</h2>
-  <span id="closeModalBtn">X</span>
+  <span id="closeModalBtn">back to <br> list</span>
   <div class="modalTop">
     <img src="${imageSrc}" alt="${title}">
     <ul id="ingredientsPlaceholder">
@@ -39,13 +39,13 @@ const renderPopUp = (ID, data) => {
   modalContainer.innerHTML = modal;
   main.appendChild(modalContainer);
 
-  //ingredients and quantities
+  // ingredients and quantities
   const ingredientsUl = document.getElementById('ingredientsPlaceholder');
   ingredients.forEach((ingredient, i) => {
     const li = document.createElement('li');
-    li.innerHTML = `<span>${quantities[i]}</span>${ingredient}`
+    li.innerHTML = `<span>${quantities[i]}</span>${ingredient}`;
     ingredientsUl.appendChild(li);
   });
-}
+};
 
-export default renderPopUp
+export default renderPopUp;
