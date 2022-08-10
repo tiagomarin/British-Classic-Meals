@@ -1,7 +1,40 @@
-* {
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+li {
+  font-size: 1.2rem;
 }
 
 header {
@@ -47,4 +80,87 @@ footer {
   background-color: gray;
   width: 100%;
   justify-content: center;
+}
+
+// modal styles -------------------
+#modalContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.modal {
+  width: 80%;
+  height: 90%;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 0;
+}
+
+#closeModalBtn {
+  position: absolute;
+  right: 10%;
+  top: 6rem;
+  text-align: end;
+}
+
+.modalTop {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalTop > img {
+  width: 50%;
+}
+
+.modalTop > h3 {
+  margin-bottom: 2rem;
+}
+
+.modalTop > ul {
+  width: 40%;
+  background-color: beige;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modalTop > ul > h3 {
+  margin-bottom: 2rem;
+}
+
+.modalTop > ul > li {
+  margin-left: 1rem;
+}
+
+.instructions {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#comment {
+  height: 8rem;
 }
