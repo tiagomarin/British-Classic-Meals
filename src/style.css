@@ -82,7 +82,7 @@ footer {
   justify-content: center;
 }
 
-// modal styles -------------------
+/* modal styles -------------------- */
 #modalContainer {
   display: flex;
   align-items: center;
