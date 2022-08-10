@@ -2,8 +2,9 @@ const getDetails = async (ID) => {
   try {
     const response = await fetch(`https://themealdb.com/api/json/v1/1/lookup.php?i=${ID}`);
     const data = await response.json();
-    const image = data.meals[0].strMealThumb;
+    const imageSrc = data.meals[0].strMealThumb;
     const title = data.meals[0].strMeal;
+    const quantities = []
     const ingredients = []
     const instructions = data.meals[0].strInstructions;
     //populate ingredients array
@@ -15,22 +16,16 @@ const getDetails = async (ID) => {
       ingredients.push(data.meals[0][`strIngredient${i}`]);
       i += 1
     }
-
-    const measure = []
+    //populate quantities array
     i = 1;
     while (i <= 20) {
       if (!data.meals[0][`strMeasure${i}`]) {
         break;
       }
-      measure.push(data.meals[0][`strMeasure${i}`]);
+      quantities.push(data.meals[0][`strMeasure${i}`]);
       i += 1
     }
-    console.log(image);
-    console.log(title);
-    console.log(ingredients);
-    console.log(measure);
-    console.log(instructions);
-
+    return [title, imageSrc, ingredients, quantities, instructions]
   }
   catch (err) {
     console.error(err);
