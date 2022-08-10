@@ -2,6 +2,7 @@ const getDetails = async (ID) => {
   try {
     const response = await fetch(`https://themealdb.com/api/json/v1/1/lookup.php?i=${ID}`);
     const data = await response.json();
+    // filter infromation we need
     const imageSrc = data.meals[0].strMealThumb;
     const title = data.meals[0].strMeal;
     const quantities = []
