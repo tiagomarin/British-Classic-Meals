@@ -37,6 +37,52 @@ li {
   font-size: 1.2rem;
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo {
+  padding: 30px;
+}
+
+.links {
+  display: flex;
+  padding: 30px;
+  gap: 20px;
+}
+
+.li {
+  list-style: none;
+}
+
+.li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.shop > div {
+  border: 1px solid black;
+}
+
+footer {
+  margin-top: 30px;
+  bottom: 0;
+  padding: 30px 0;
+  display: flex;
+  background-color: gray;
+  width: 100%;
+  justify-content: center;
+}
+
+// modal styles -------------------
 #modalContainer {
   display: flex;
   align-items: center;

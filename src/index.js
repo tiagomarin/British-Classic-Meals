@@ -1,7 +1,10 @@
 import './style.css';
+import card from './modules/loadCard';
 import getDetails from './modules/getDetails';
 import renderPopUp from './modules/renderPopUp';
 import clearPopUp from './modules/clearPopUp';
+
+card(); // load page
 
 // DOM elements:
 const detailsBtn = document.querySelectorAll('.recipeBtn');
