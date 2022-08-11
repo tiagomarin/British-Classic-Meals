@@ -6,21 +6,19 @@ import clearPopUp from './modules/clearPopUp';
 
 card(); // load page
 
-// DOM elements:
-const detailsBtn = document.querySelectorAll('.recipeBtn');
-
 // EVENT LISTENERS ---------------------------------
 // details button
-detailsBtn.forEach((button) => {
-  button.addEventListener('click', (e) => {
+window.addEventListener('click', (e) => {
+  if (e.target.className === "recipeBtn") {
     const mealID = e.target.parentElement.parentElement.id;
     const displayPopUp = async () => {
       const data = await getDetails(mealID);
       renderPopUp(mealID, data);
     };
     displayPopUp();
-  });
+  }
 });
+
 // close details button
 window.addEventListener('click', (e) => {
   if (e.target.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
