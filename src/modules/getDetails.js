@@ -1,6 +1,9 @@
-const getDetails = async (ID) => {
+import getComments from "./getComments";
+
+const getDetails = async (mealID) => {
+  const comments = await getComments(mealID);
   try {
-    const response = await fetch(`https://themealdb.com/api/json/v1/1/lookup.php?i=${ID}`);
+    const response = await fetch(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`);
     const data = await response.json();
     // filter infromation we need
     const imageSrc = data.meals[0].strMealThumb;
@@ -24,7 +27,7 @@ const getDetails = async (ID) => {
       }
       i += 1;
     }
-    return [title, imageSrc, ingredients, quantities, instructions];
+    return [title, imageSrc, ingredients, quantities, instructions, comments];
   } catch (err) {
     return console.error(err);
   }

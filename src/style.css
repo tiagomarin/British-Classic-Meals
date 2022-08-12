@@ -68,7 +68,7 @@ header {
   justify-content: center;
 }
 
-.shop > div {
+.shop>div {
   border: 1px solid black;
 }
 
@@ -122,15 +122,15 @@ footer {
   justify-content: space-between;
 }
 
-.modalTop > img {
+.modalTop>img {
   width: 50%;
 }
 
-.modalTop > h3 {
+.modalTop>h3 {
   margin-bottom: 2rem;
 }
 
-.modalTop > ul {
+.modalTop>ul {
   width: 40%;
   background-color: beige;
   padding: 4rem;
@@ -139,11 +139,11 @@ footer {
   gap: 0.5rem;
 }
 
-.modalTop > ul > h3 {
+.modalTop>ul>h3 {
   margin-bottom: 2rem;
 }
 
-.modalTop > ul > li {
+.modalTop>ul>li {
   margin-left: 1rem;
 }
 
@@ -161,6 +161,34 @@ footer {
   gap: 2rem;
 }
 
-#comment {
+#commentArea {
   height: 8rem;
+}
+
+#commentsSection {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: cadetblue;
+  padding: 2rem;
+}
+
+#commentsSection>h3 {
+  margin-bottom: 3rem;
+}
+
+#commentsPlaceholder {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.commentCard {
+  width: 80%;
+  border: 1px solid #000;
+  background-color: rgb(250, 250, 250);
+  padding: 2rem;
 }
