@@ -1,4 +1,4 @@
-const loadMeal = async () => {
+const loadMeals = async () => {
   const response = await fetch(
     'https://themealdb.com/api/json/v1/1/filter.php?a=British',
   );
@@ -6,4 +6,4 @@ const loadMeal = async () => {
   const mealArray = mealList.meals;
   return mealArray;
 };
-export default loadMeal;
+export default loadMeals;

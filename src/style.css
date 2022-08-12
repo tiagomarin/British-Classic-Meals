@@ -68,6 +68,22 @@ header {
   justify-content: center;
 }
 
+@media (max-width:1000px){
+  .shop{
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+@media (max-width:800px){
+  .shop{
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+@media (max-width:500px){
+  .shop{
+    grid-template-columns: repeat(1, 200px);
+  }
+}
+
 .shop > div {
   border: 1px solid black;
 }
