@@ -1,4 +1,4 @@
-import getComments from "./getComments";
+import getComments from './getComments';
 
 const getDetails = async (mealID) => {
   const comments = await getComments(mealID);

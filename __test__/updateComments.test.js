@@ -2,10 +2,10 @@
  * @jest-environment jsdom
 */
 
-import updateComments from "../src/modules/updateComments";
+import updateComments from '../src/modules/updateComments';
 
 describe('update comment section after add a new one', () => {
-  //set up environment
+  // set up environment
   document.body.innerHTML = `
   <div id="commentsSection">
   <h3>Comments &nbsp; (<span id="commentsCounter">5</span>)</h3>
@@ -36,25 +36,25 @@ describe('update comment section after add a new one', () => {
       <p id="comment">I want that!</p>
     </div>
   </div>
-</div>`
+</div>`;
   test('counter was incremented by 1', () => {
-    const commentsCounterBefore = +document.getElementById('commentsCounter');
-    const userName = "Kleiton"
-    const comment = "I really love this recipe"
-    updateComments(userName, comment)
+    let commentsCounterBefore = +document.getElementById('commentsCounter');
+    const userName = 'Kleiton';
+    const comment = 'I really love this recipe';
+    updateComments(userName, comment);
     const commentsCounterAfter = +document.getElementById('commentsCounter');
-    expect(commentsCounterAfter).toEqual(commentsCounterBefore += 1)
-  })
+    expect(commentsCounterAfter).toEqual(commentsCounterBefore += 1);
+  });
   test('the new comment was displayed correctly to user', () => {
     const numOfCommentsBefore = document.getElementById('commentsPlaceholder').childElementCount;
-    const userNameMock = "Kleiton"
-    const commentMock = "I really love this recipe"
-    updateComments(userNameMock, commentMock)
+    const userNameMock = 'Kleiton';
+    const commentMock = 'I really love this recipe';
+    updateComments(userNameMock, commentMock);
     const numOfCommentsAfter = document.getElementById('commentsPlaceholder').childElementCount;
     const userNameAfter = document.getElementById('commentsPlaceholder').lastElementChild.firstElementChild.innerHTML;
     const commentAfter = document.getElementById('commentsPlaceholder').lastElementChild.lastElementChild.innerHTML;
     expect(numOfCommentsAfter).toEqual(numOfCommentsBefore);
     expect(userNameAfter).toEqual(userNameMock);
     expect(commentAfter).toEqual(commentMock);
-  })
-})
+  });
+});

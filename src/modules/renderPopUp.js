@@ -6,9 +6,9 @@ const renderPopUp = (ID, data) => {
   const quantities = data[3]; // array
   const instructions = data[4];
   const comments = data[5];
-  let commentCounter = 0
+  let commentCounter = 0;
   if (data[5].length) {
-    commentCounter = data[5].length; // array  
+    commentCounter = data[5].length; // array
   }
 
   // start creating html -------------------------
@@ -56,14 +56,14 @@ const renderPopUp = (ID, data) => {
   // comments
   if (comments.length) {
     const commentsPlaceholder = document.getElementById('commentsPlaceholder');
-    comments.forEach(comment => {
+    comments.forEach((comment) => {
       const commentCard = `<div class="commentCard">
                           <h3 id="commenter">${comment.username}</h3>
                           <span id="commentDate">${comment.creation_date}</span>
                           <p id="comment">${comment.comment}</p>
-                        </div>`
+                        </div>`;
       commentsPlaceholder.innerHTML += commentCard;
-    })
+    });
   }
 };
 
