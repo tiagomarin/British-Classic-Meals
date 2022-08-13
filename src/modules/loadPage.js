@@ -24,14 +24,16 @@ const loadPage = async () => {
     loadHtml.id = element.idMeal;
     loadHtml.classList = "mealCard"
     const data = `
-        <img src="${element.strMealThumb}" alt="${element.strMeal}"  />
-        <div class="cardInfo">
-          <div class="title">
-            <h3>${element.strMeal}</h3>
-            <button class="likeBtn" ><i class="fa-regular fa-heart"></i> &nbsp; <span id="${element.idMeal}" class="likeCount">${likes}</span></button>
-          </div>
-          <button class="recipeBtn" >Recipe</button>
-        <div>
+      <img src="${element.strMealThumb}" alt="${element.strMeal}" />
+      <div class="cardInfo">
+        <div class="title">
+          <h3>${element.strMeal}</h3>
+          <button class="likeBtn"><i class="fa-regular fa-heart"></i> &nbsp; <span id="${element.idMeal}"
+              class="likeCount">${likes}</span></button>
+        </div>
+        <button class="recipeBtn">Recipe</button>
+      </div>
+      <div class="breakLine"></div>
  `;
     loadHtml.innerHTML += data;
     shop.appendChild(loadHtml);

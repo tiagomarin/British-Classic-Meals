@@ -14,6 +14,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  color: #151414;
 }
 
 h1 {
@@ -35,6 +36,12 @@ p {
 
 li {
   font-size: 1.2rem;
+}
+
+body {
+  background: url(assets/bg-tall-mobile.png) center fixed no-repeat;
+  background-size: cover;
+  overflow: hidden
 }
 
 header {
@@ -62,20 +69,47 @@ header {
   color: inherit;
 }
 
-.shop {
-  display: grid;
-  grid-template-columns: repeat(4, 28rem);
-  gap: 5rem;
+main {
+  display: flex;
   justify-content: center;
+  height: 100vh;
 }
+
+.shop {
+  width: 70%;
+  height: 60%;
+  overflow-y: scroll;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+
+/* @media screen and (max-aspect-ratio: 0.465/1) {
+  .shop {
+    width: 70%;
+    height: 60%;
+    overflow-y: scroll;
+    justify-content: center;
+    margin-top: 25%;
+  }
+} */
 
 .mealCard {
   width: 100%;
+  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mealCard>* {
+  width: 90%
 }
 
 .mealCard>img {
-  width: 100%;
+  margin-top: 1rem;
 }
 
 .cardInfo {
@@ -84,7 +118,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 1.6rem 0;
 }
 
 .title {
@@ -104,13 +138,26 @@ header {
 }
 
 .recipeBtn {
-  width: max-content;
   padding: 0.4rem 1.2rem;
+  width: max-content;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
+  -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
+  box-shadow: 0 0 5px 2px #3d3d3d80 inset;
+  border: none;
+  background-color: transparent;
 }
 
+.breakLine {
+  width: 100%;
+  height: 2rem;
+  background: url(assets/breakLine-black.png) no-repeat;
+  background-size: 100%;
+}
 
+/* grid-template-columns: repeat(4, 28rem); */
 
-@media (max-width:1300px) {
+/* @media (max-width:1300px) {
   .shop {
     grid-template-columns: repeat(3, 28rem);
   }
@@ -126,11 +173,9 @@ header {
   .shop {
     grid-template-columns: repeat(1, 28rem);
   }
-}
+} */
 
-.shop>div {
-  border: 1px solid black;
-}
+
 
 footer {
   margin-top: 3rem;

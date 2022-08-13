@@ -4,7 +4,7 @@ import getDetails from './modules/getDetails';
 import renderPopUp from './modules/renderPopUp';
 import clearPopUp from './modules/clearPopUp';
 import postLikes from './modules/postLikes';
-import logo from './logo.png'
+import logo from './assets/logo.png'
 
 document.getElementById('logo').src = logo;
 
