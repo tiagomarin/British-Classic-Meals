@@ -11,7 +11,7 @@ document.getElementById('logo').src = logo;
 loadPage(); // load page
 
 // EVENT LISTENERS ---------------------------------
-// details button
+// open modal button
 window.addEventListener('click', (e) => {
   if (e.target.className === "recipeBtn") {
     const mealID = e.target.parentElement.parentElement.id;
@@ -20,15 +20,27 @@ window.addEventListener('click', (e) => {
       renderPopUp(mealID, data);
     };
     displayPopUp();
+    // document.getElementsByTagName('footer').className.add('hide')
   }
 });
 
-// close details button
+// close modal button
 window.addEventListener('click', (e) => {
   if (e.target.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
     clearPopUp();
+    // document.getElementsByTagName('footer').className.remove('hide')
   }
 });
+
+// show/hide instructions
+window.addEventListener('click', (e) => {
+  if (e.target.id === "instructionsBtn" ||
+    e.target.parentElement.id === "instructionsBtn") {
+    document.getElementById('instructions').classList.toggle('show')
+    e.target.innerHTML = '<i class="fa-solid fa-angle-up"></i>'
+  }
+})
+
 
 
 // like button event
