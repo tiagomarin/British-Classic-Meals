@@ -89,17 +89,6 @@ main {
   margin-top: 1.8rem;
 }
 
-
-/* @media screen and (max-aspect-ratio: 0.465/1) {
-  .shop {
-    width: 70%;
-    height: 60%;
-    overflow-y: scroll;
-    justify-content: center;
-    margin-top: 25%;
-  }
-} */
-
 .mealCard {
   width: 100%;
   height: 100%;
@@ -110,11 +99,11 @@ main {
   justify-content: center;
 }
 
-.mealCard>* {
+.mealCard > * {
   width: 90%;
 }
 
-.mealCard>img {
+.mealCard > img {
   margin-top: 1rem;
 }
 
@@ -133,7 +122,7 @@ main {
   justify-content: space-between;
 }
 
-.title>h3 {
+.title > h3 {
   width: 75%;
 }
 
@@ -172,7 +161,7 @@ footer {
   justify-content: center;
 }
 
-footer>p {
+footer > p {
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0 2rem;
@@ -211,7 +200,7 @@ footer.hide {
   background-size: 100%;
 }
 
-.modal>h2 {
+.modal > h2 {
   width: 60%;
   text-align: center;
   font-size: 2rem;
@@ -234,11 +223,11 @@ footer.hide {
   gap: 2rem;
 }
 
-.modalTop>img {
+.modalTop > img {
   width: 100%;
 }
 
-.modalTop>h3 {
+.modalTop > h3 {
   margin-bottom: 0.2rem;
 }
 
@@ -275,7 +264,7 @@ footer.hide {
   justify-content: space-between;
 }
 
-#instructionsTop>h3 {
+#instructionsTop > h3 {
   width: 88%;
 }
 
@@ -299,7 +288,7 @@ footer.hide {
   overflow-y: hidden;
 }
 
-#instructions.show>p {
+#instructions.show > p {
   width: 88%;
   overflow-y: scroll;
 }
@@ -317,7 +306,7 @@ footer.hide {
   padding: 2rem 0;
 }
 
-#commentsSection>h3 {
+#commentsSection > h3 {
   margin-bottom: 3rem;
 }
 
@@ -333,7 +322,6 @@ footer.hide {
 .commentCard {
   width: 95%;
   height: max-content;
-  border: 1px solid #000;
   padding: 1rem 2rem;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
@@ -354,7 +342,7 @@ footer.hide {
   gap: 2rem;
 }
 
-#form>* {
+#form > * {
   padding: 0.4rem 1.2rem;
   width: 100%;
   border-radius: 5px;
@@ -365,7 +353,7 @@ footer.hide {
   background-color: transparent;
 }
 
-#form>h3 {
+#form > h3 {
   width: 60%;
   padding: 0;
   box-shadow: none;
@@ -374,7 +362,7 @@ footer.hide {
   font-size: 1.4rem;
 }
 
-#form>button {
+#form > button {
   width: max-content;
   align-self: flex-end;
 }
@@ -449,7 +437,7 @@ footer.hide {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  footer>p {
+  footer > p {
     font-size: 1.4rem;
     border-radius: 6px;
   }
@@ -481,7 +469,7 @@ footer.hide {
     gap: 2rem;
   }
 
-  .modalTop>img {
+  .modalTop > img {
     width: 50%;
   }
 
@@ -502,17 +490,13 @@ footer.hide {
     gap: 2rem;
   }
 
-  .modalTop>ul>li>span {
-    margin-right: 1rem;
-  }
-
   #instructionsTop {
     width: 88%;
     display: flex;
     justify-content: flex-start;
   }
 
-  #instructionsTop>h3 {
+  #instructionsTop > h3 {
     width: max-content;
   }
 
@@ -530,9 +514,17 @@ footer.hide {
     overflow-y: hidden;
   }
 
-  #instructions.show>p {
+  #instructions.show > p {
     width: 88%;
     overflow-y: scroll;
+  }
+
+  #commentsPlaceholder {
+    height: 30rem;
+  }
+
+  #comment {
+    height: max-content;
   }
 
   #form {
@@ -542,7 +534,7 @@ footer.hide {
     gap: 2rem;
   }
 
-  #form>* {
+  #form > * {
     padding: 0.4rem 1.2rem;
     width: 100%;
     border-radius: 5px;
@@ -553,7 +545,7 @@ footer.hide {
     background-color: transparent;
   }
 
-  #form>h3 {
+  #form > h3 {
     width: 60%;
     padding: 0;
     box-shadow: none;
@@ -562,11 +554,7 @@ footer.hide {
     font-size: 1.4rem;
   }
 
-  #comment {
-    height: 8rem;
-  }
-
-  #form>button {
+  #form > button {
     width: max-content;
     align-self: flex-end;
   }

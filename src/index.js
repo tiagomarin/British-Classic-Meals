@@ -51,13 +51,13 @@ window.addEventListener('click', (e) => {
 
 // like button event
 window.addEventListener('click', async (e) => {
-  if (e.target.className === 'likeBtn') {
-    const mealID = e.target.parentElement.parentElement.id;
-    const span = e.target.nextSibling.id;
-    let likeCount = e.target.nextSibling.innerHTML;
+  if (e.target.id === 'likeIcon') {
+    const mealID = e.target.parentElement.parentElement.parentElement.parentElement.id;
+    const span = e.target.nextSibling.nextSibling.id;
+    let likeCount = +(e.target.nextSibling.nextSibling.innerHTML);
     if (mealID === span) {
       likeCount += 1;
-      e.target.nextSibling.innerHTML = likeCount;
+      e.target.nextSibling.nextSibling.innerHTML = likeCount;
     }
     await postLikes(mealID, likeCount);
   }

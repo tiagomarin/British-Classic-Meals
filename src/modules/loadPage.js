@@ -28,8 +28,10 @@ const loadPage = async () => {
       <div class="cardInfo">
         <div class="title">
           <h3>${element.strMeal}</h3>
-          <button class="likeBtn"><i class="fa-regular fa-heart"></i> &nbsp; <span id="${element.idMeal}"
-              class="likeCount">${likes}</span></button>
+          <button class="likeBtn">
+            <i id="likeIcon" class="fa-regular fa-heart"></i> &nbsp;
+            <span id="${element.idMeal}" class="likeCount">${likes}</span>
+          </button>
         </div>
         <button class="recipeBtn">Recipe</button>
       </div>
