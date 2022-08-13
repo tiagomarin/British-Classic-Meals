@@ -8,6 +8,7 @@ import logo from './assets/logo.png';
 
 document.getElementById('logo').src = logo;
 
+
 loadPage(); // load page
 
 // EVENT LISTENERS ---------------------------------
