@@ -39,10 +39,9 @@ Or
 
 👤 **Basit Ali**
 
-
-GitHub: @basitali111
-Twitter: @BasitAl35031734
-LinkedIn: basit-ali-3961141b3
+- GitHub: [@githubhandle](https://github.com/basitali111)
+- Twitter: [@twitterhandle](https://twitter.com/BasitAl35031734)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/basit-ali-3961141b3/)
 
 
 ## 🤝 Contributing
