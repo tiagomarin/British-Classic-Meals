@@ -5,8 +5,6 @@ const updateComments = (userName, comment) => {
   commentsCounter += 1;
   document.getElementById('commentsCounter').innerHTML = commentsCounter;
 
-  // (document.getElementById('commentsCounter').innerHTML)++;
-
   // update the comments section adding the new comment
   const commentsPlaceholder = document.getElementById('commentsPlaceholder');
   const today = new Date();
