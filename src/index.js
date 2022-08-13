@@ -27,6 +27,6 @@ window.addEventListener('click', (e) => {
     const mealID = e.target.id;
     const userName = document.getElementById('userName').value;
     const comment = document.getElementById('commentArea').value;
-    const response = saveNewComment(mealID, userName, comment);
+    saveNewComment(mealID, userName, comment);
   }
 });

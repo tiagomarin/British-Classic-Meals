@@ -1,7 +1,6 @@
 /**
  * @jest-environment jsdom
 */
-
 import updateComments from '../src/modules/updateComments';
 
 describe('update comment section after add a new one', () => {
@@ -46,14 +45,14 @@ describe('update comment section after add a new one', () => {
     expect(commentsCounterAfter).toEqual(commentsCounterBefore += 1);
   });
   test('the new comment was displayed correctly to user', () => {
-    const numOfCommentsBefore = document.getElementById('commentsPlaceholder').childElementCount;
+    let numOfCommentsBefore = document.getElementById('commentsPlaceholder').childElementCount;
     const userNameMock = 'Kleiton';
     const commentMock = 'I really love this recipe';
     updateComments(userNameMock, commentMock);
     const numOfCommentsAfter = document.getElementById('commentsPlaceholder').childElementCount;
     const userNameAfter = document.getElementById('commentsPlaceholder').lastElementChild.firstElementChild.innerHTML;
     const commentAfter = document.getElementById('commentsPlaceholder').lastElementChild.lastElementChild.innerHTML;
-    expect(numOfCommentsAfter).toEqual(numOfCommentsBefore);
+    expect(numOfCommentsAfter).toEqual(numOfCommentsBefore += 1);
     expect(userNameAfter).toEqual(userNameMock);
     expect(commentAfter).toEqual(commentMock);
   });

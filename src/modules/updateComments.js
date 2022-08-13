@@ -1,6 +1,5 @@
 const updateComments = (userName, comment) => {
   // update counter
-
   let commentsCounter = +document.getElementById('commentsCounter').innerHTML;
   commentsCounter += 1;
   document.getElementById('commentsCounter').innerHTML = commentsCounter;
