@@ -40,9 +40,9 @@ Or
 👤 **Tiago Lelinski Marin**
 
 
--GitHub: @basitali111
--Twitter: @BasitAl35031734
--LinkedIn: basit-ali-3961141b3
+-GitHub:[ @basitali111]
+-Twitter:[ @BasitAl35031734]
+-LinkedIn: [basit-ali-3961141b3]
 
 
 ## 🤝 Contributing
