@@ -45,8 +45,6 @@ window.addEventListener('click', (e) => {
   }
 })
 
-
-
 // like button event
 window.addEventListener('click', async (e) => {
   if (e.target.className === 'likeBtn') {

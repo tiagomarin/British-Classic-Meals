@@ -162,28 +162,6 @@ main {
   margin-top: 1.8rem;
 }
 
-/* grid-template-columns: repeat(4, 28rem); */
-
-/* @media (max-width:1300px) {
-  .shop {
-    grid-template-columns: repeat(3, 28rem);
-  }
-}
-
-@media (max-width:1000px) {
-  .shop {
-    grid-template-columns: repeat(2, 28rem);
-  }
-}
-
-@media (max-width:700px) {
-  .shop {
-    grid-template-columns: repeat(1, 28rem);
-  }
-} */
-
-
-
 footer {
   position: fixed;
   bottom: 0;
@@ -281,11 +259,7 @@ footer.hide {
   overflow-y: scroll;
 }
 
-.modalTop>ul>h3 {
-  margin-bottom: 2rem;
-}
-
-.modalTop>ul>li {
+#ingredientsPlaceholder {
   margin-left: 1rem;
 }
 
@@ -370,85 +344,203 @@ footer.hide {
   align-self: flex-end;
 }
 
-/* Desktop */
-/* #modalContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  overflow-y: auto;
-}
 
-.modal {
-  width: 80%;
-  height: 90%;
-  position: relative;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(250, 250, 250);
-  align-items: center;
-  gap: 4rem;
-  padding: 6rem 0;
-}
+@media screen and (min-width:768px) {
+  html {
+    font-size: 62, 5%;
+  }
 
-#closeModalBtn {
-  position: absolute;
-  right: 10%;
-  top: 6rem;
-  text-align: end;
-}
+  body {
+    background: url(assets/bg-desktop.png) center fixed no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    height: 100vh;
+  }
 
-.modalTop {
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  header {
+    padding: 1rem 15%;
+  }
 
-.modalTop>img {
-  width: 50%;
-}
+  #logo {
+    height: 5rem;
+  }
 
-.modalTop>h3 {
-  margin-bottom: 2rem;
-}
+  main {
+    margin-top: 6.5%;
+  }
 
-.modalTop>ul {
-  width: 40%;
-  background-color: beige;
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+  .shop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 65%;
+    height: 65vh;
+    margin-top: 4rem;
+    overflow-y: auto;
+  }
 
-.modalTop>ul>h3 {
-  margin-bottom: 2rem;
-}
+  .mealCard {
+    width: 25%;
+    height: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
+    -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
+    box-shadow: 0 0 5px 2px #3d3d3d80 inset;
+    border: none;
+    background-color: transparent;
+  }
 
-.modalTop>ul>li {
-  margin-left: 1rem;
-}
+  .cardInfo {
+    gap: 1rem;
+    padding: 1.6rem 0 0;
+  }
 
-.instructions {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+  .title {
+    min-height: 5rem;
+    align-items: flex-start;
+  }
 
-.form {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+  .likeBtn {
+    width: 6rem;
+  }
 
-#comment {
-  height: 8rem;
-} */
+  .breakLine {
+    width: 80%;
+    margin: 1rem 0;
+  }
+
+  footer {
+    padding: 2.2rem 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  footer>p {
+    font-size: 1.4rem;
+    border-radius: 6px;
+  }
+
+  footer.hide {
+    display: none;
+  }
+
+  /* --- modal styles --- */
+  #modalContainer {
+    left: 0;
+    right: 0;
+  }
+
+  .modal {
+    width: 75%;
+    height: 85%;
+    gap: 4rem;
+    padding: 6rem 0;
+  }
+
+  #closeModalBtn {
+    right: 5%;
+    top: 4rem;
+  }
+
+  .modalTop {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .modalTop>img {
+    width: 50%;
+  }
+
+  #ingredientsWrap {
+    padding: 10% 5% 2%;
+  }
+
+  #ingredientsPlaceholder {
+    margin: 1rem 0 4rem;
+  }
+
+  .instructionsWrap {
+    width: 100%;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .modalTop>ul>li>span {
+    margin-right: 1rem;
+  }
+
+  #instructionsTop {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #instructionsTop>h3 {
+    width: 80%;
+  }
+
+  #instructionsBtn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
+    -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
+    box-shadow: 0 0 5px 2px #3d3d3d80 inset;
+    border: none;
+    background-color: transparent;
+  }
+
+  #instructions {
+    display: none;
+  }
+
+  #instructions.show {
+
+    display: contents;
+    height: 50rem;
+    overflow-y: hidden;
+  }
+
+  #instructions.show>p {
+    width: 80%;
+    overflow-y: scroll;
+  }
+
+  .form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form>* {
+    padding: 0.4rem 1.2rem;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
+    -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
+    box-shadow: 0 0 5px 2px #3d3d3d80 inset;
+    border: none;
+    background-color: transparent;
+  }
+
+  .form>h3 {
+    width: 60%;
+    padding: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    font-size: 1.4rem;
+  }
+
+  #comment {
+    height: 8rem;
+  }
+
+  .form>button {
+    width: max-content;
+    align-self: flex-end;
+  }
+}
