@@ -18,7 +18,7 @@ html {
 }
 
 h1 {
-  font-size: 3.6rem;
+  font-size: 3rem;
 }
 
 h2 {
@@ -48,11 +48,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 0.3rem 10%;
+  background-color: white;
 }
 
 #logo {
-  height: 4rem;
+  height: 3rem;
 }
 
 .links {
@@ -62,17 +63,22 @@ header {
 
 .li {
   list-style: none;
+  vertical-align: bottom;
 }
 
 .li a {
   text-decoration: none;
   color: inherit;
+  font-size: 1.4rem;
+  height: 100%;
 }
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   height: 100vh;
+  margin-top: 18%;
 }
 
 .shop {
@@ -80,7 +86,7 @@ main {
   height: 60%;
   overflow-y: scroll;
   justify-content: center;
-  margin-top: 10%;
+  margin-top: 1.8rem;
 }
 
 
@@ -153,6 +159,7 @@ main {
   height: 2rem;
   background: url(assets/breakLine-black.png) no-repeat;
   background-size: 100%;
+  margin-top: 1.8rem;
 }
 
 /* grid-template-columns: repeat(4, 28rem); */
@@ -179,12 +186,20 @@ main {
 
 footer {
   margin-top: 3rem;
+  position: fixed;
   bottom: 0;
-  padding: 3rem 0;
+  padding: 1.2rem 0;
   display: flex;
-  background-color: gray;
+  background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
   justify-content: center;
+}
+
+footer>p {
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 2rem;
+  border-radius: 10px;
 }
 
 /* modal styles -------------------- */
