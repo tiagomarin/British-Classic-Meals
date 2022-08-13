@@ -41,7 +41,7 @@ li {
 body {
   background: url(assets/bg-tall-mobile.png) center fixed no-repeat;
   background-size: cover;
-  overflow: hidden
+  overflow: hidden;
 }
 
 header {
@@ -110,11 +110,11 @@ main {
   justify-content: center;
 }
 
-.mealCard>* {
-  width: 90%
+.mealCard > * {
+  width: 90%;
 }
 
-.mealCard>img {
+.mealCard > img {
   margin-top: 1rem;
 }
 
@@ -133,7 +133,7 @@ main {
   justify-content: space-between;
 }
 
-.title>h3 {
+.title > h3 {
   width: 75%;
 }
 
@@ -172,7 +172,7 @@ footer {
   justify-content: center;
 }
 
-footer>p {
+footer > p {
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0 2rem;
@@ -207,11 +207,11 @@ footer.hide {
   align-items: center;
   gap: 2rem;
   padding: 3rem 0;
-  background: url(assets/background-modal-mobile.png)center fixed no-repeat;
+  background: url(assets/background-modal-mobile.png) center fixed no-repeat;
   background-size: 100%;
 }
 
-.modal>h2 {
+.modal > h2 {
   width: 60%;
   text-align: center;
   font-size: 2rem;
@@ -234,11 +234,11 @@ footer.hide {
   gap: 2rem;
 }
 
-.modalTop>img {
+.modalTop > img {
   width: 100%;
 }
 
-.modalTop>h3 {
+.modalTop > h3 {
   margin-bottom: 0.2rem;
 }
 
@@ -257,9 +257,6 @@ footer.hide {
   height: 70%;
   margin: 1rem 0 4rem;
   overflow-y: scroll;
-}
-
-#ingredientsPlaceholder {
   margin-left: 1rem;
 }
 
@@ -278,7 +275,7 @@ footer.hide {
   justify-content: space-between;
 }
 
-#instructionsTop>h3 {
+#instructionsTop > h3 {
   width: 80%;
 }
 
@@ -297,25 +294,24 @@ footer.hide {
 }
 
 #instructions.show {
-
   display: contents;
   height: 50rem;
   overflow-y: hidden;
 }
 
-#instructions.show>p {
+#instructions.show > p {
   width: 80%;
   overflow-y: scroll;
 }
 
-.form {
+#form {
   width: 80%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.form>* {
+#form > * {
   padding: 0.4rem 1.2rem;
   width: 100%;
   border-radius: 5px;
@@ -326,7 +322,7 @@ footer.hide {
   background-color: transparent;
 }
 
-.form>h3 {
+#form > h3 {
   width: 60%;
   padding: 0;
   box-shadow: none;
@@ -339,15 +335,14 @@ footer.hide {
   height: 8rem;
 }
 
-.form>button {
+#form > button {
   width: max-content;
   align-self: flex-end;
 }
 
-
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   html {
-    font-size: 62, 5%;
+    font-size: 62.5%;
   }
 
   body {
@@ -415,7 +410,7 @@ footer.hide {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  footer>p {
+  footer > p {
     font-size: 1.4rem;
     border-radius: 6px;
   }
@@ -447,7 +442,7 @@ footer.hide {
     gap: 2rem;
   }
 
-  .modalTop>img {
+  .modalTop > img {
     width: 50%;
   }
 
@@ -468,7 +463,7 @@ footer.hide {
     gap: 2rem;
   }
 
-  .modalTop>ul>li>span {
+  .modalTop > ul > li > span {
     margin-right: 1rem;
   }
 
@@ -478,18 +473,12 @@ footer.hide {
     justify-content: flex-start;
   }
 
-  #instructionsTop>h3 {
-    width: 80%;
+  #instructionsTop > h3 {
+    width: max-content;
   }
 
   #instructionsBtn {
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
-    -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
-    box-shadow: 0 0 5px 2px #3d3d3d80 inset;
-    border: none;
-    background-color: transparent;
+    margin-left: 2rem;
   }
 
   #instructions {
@@ -497,25 +486,24 @@ footer.hide {
   }
 
   #instructions.show {
-
     display: contents;
     height: 50rem;
     overflow-y: hidden;
   }
 
-  #instructions.show>p {
+  #instructions.show > p {
     width: 80%;
     overflow-y: scroll;
   }
 
-  .form {
+  #form {
     width: 80%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  .form>* {
+  #form > * {
     padding: 0.4rem 1.2rem;
     width: 100%;
     border-radius: 5px;
@@ -526,7 +514,7 @@ footer.hide {
     background-color: transparent;
   }
 
-  .form>h3 {
+  #form > h3 {
     width: 60%;
     padding: 0;
     box-shadow: none;
@@ -539,7 +527,7 @@ footer.hide {
     height: 8rem;
   }
 
-  .form>button {
+  #form > button {
     width: max-content;
     align-self: flex-end;
   }

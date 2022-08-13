@@ -33,7 +33,7 @@ const renderPopUp = (ID, data) => {
       <p>${instructions}</p>
     </div>
   </div>
-  <form class="form">
+  <form id="form">
     <h3>Be the first to leave a comment!</h3>
     <input type="text" placeholder="Your Name">
     <textarea id="comment" placeholder="Write here..."></textarea>
