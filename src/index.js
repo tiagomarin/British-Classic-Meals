@@ -1,10 +1,17 @@
 import './style.css';
-import card from './modules/loadCard';
+
+import loadPage from './modules/loadPage';
 import displayPopUp from './modules/displayPopUp';
+import getDetails from './modules/getDetails';
+import renderPopUp from './modules/renderPopUp';
 import clearPopUp from './modules/clearPopUp';
 import saveNewComment from './modules/saveNewComment';
+import postLikes from './modules/postLikes';
+import logo from './assets/logo.png';
 
-card(); // load page
+document.getElementById('logo').src = logo;
+
+loadPage(); // load page
 
 // EVENT LISTENERS ---------------------------------
 // details button
@@ -16,9 +23,45 @@ window.addEventListener('click', (e) => {
 });
 
 // close details button
+
 window.addEventListener('click', (e) => {
-  if (e.target.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
+  if (e.target.parentElement.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
     clearPopUp();
+    // document.getElementsByTagName('footer').className.remove('hide')
+  }
+});
+
+// show/hide instructions
+window.addEventListener('click', (e) => {
+  if (e.target.id === 'instructionsBtn') {
+    document.getElementById('instructions').classList.toggle('show');
+    if (e.target.innerHTML === '<i class="fa-solid fa-angle-down"></i>') {
+      e.target.innerHTML = '<i class="fa-solid fa-angle-up"></i>';
+    } else {
+      e.target.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+    }
+  }
+  if (e.target.parentElement.id === 'instructionsBtn') {
+    document.getElementById('instructions').classList.toggle('show');
+    if (e.target.parentElement.innerHTML === '<i class="fa-solid fa-angle-down"></i>') {
+      e.target.parentElement.innerHTML = '<i class="fa-solid fa-angle-up"></i>';
+    } else {
+      e.target.parentElement.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+    }
+  }
+});
+
+// like button event
+window.addEventListener('click', async (e) => {
+  if (e.target.className === 'likeBtn') {
+    const mealID = e.target.parentElement.parentElement.id;
+    const span = e.target.nextSibling.id;
+    let likeCount = e.target.nextSibling.innerHTML;
+    if (mealID === span) {
+      likeCount += 1;
+      e.target.nextSibling.innerHTML = likeCount;
+    }
+    await postLikes(mealID, likeCount);
   }
 });
 
