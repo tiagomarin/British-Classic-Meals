@@ -18,6 +18,8 @@ Check it out! What is your favorite from the list? Or which one would you choose
 - JavaScript
 - Webpack
 
+## Live demo
+You can access the live demo through this [link](https://tiago-lelinski-marin.github.io/British-Classic-Meals/)
 
 ## Getting Started
 
