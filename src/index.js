@@ -26,7 +26,7 @@ window.addEventListener('click', (e) => {
 
 // close modal button
 window.addEventListener('click', (e) => {
-  if (e.target.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
+  if (e.target.parentElement.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
     clearPopUp();
     // document.getElementsByTagName('footer').className.remove('hide')
   }
@@ -37,7 +37,11 @@ window.addEventListener('click', (e) => {
   if (e.target.id === "instructionsBtn" ||
     e.target.parentElement.id === "instructionsBtn") {
     document.getElementById('instructions').classList.toggle('show')
-    e.target.innerHTML = '<i class="fa-solid fa-angle-up"></i>'
+    if (e.target.parentElement.innerHTML === '<i class="fa-solid fa-angle-down"></i>') {
+      e.target.parentElement.innerHTML = '<i class="fa-solid fa-angle-up"></i>';
+    } else {
+      e.target.parentElement.innerHTML = '<i class="fa-solid fa-angle-down"></i>';
+    }
   }
 })
 

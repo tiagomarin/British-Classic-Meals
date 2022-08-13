@@ -226,23 +226,25 @@ footer.hide {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  background-color: rgb(250, 250, 250);
   align-items: center;
   gap: 2rem;
-  padding: 4rem 0;
+  padding: 3rem 0;
   background: url(assets/background-modal-mobile.png)center fixed no-repeat;
   background-size: 100%;
 }
 
 .modal>h2 {
-  width: 70%;
+  width: 60%;
+  text-align: center;
+  font-size: 2rem;
 }
 
 #closeModalBtn {
   position: absolute;
-  right: 10%;
-  top: 6rem;
+  right: 5%;
+  top: 2.5%;
   text-align: end;
+  font-size: 2rem;
 }
 
 .modalTop {
@@ -296,8 +298,24 @@ footer.hide {
   gap: 2rem;
 }
 
-.instructionsWrap>* {
+#instructionsTop {
   width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#instructionsTop>h3 {
+  width: 80%;
+}
+
+#instructionsBtn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
+  -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
+  box-shadow: 0 0 5px 2px #3d3d3d80 inset;
+  border: none;
+  background-color: transparent;
 }
 
 #instructions {
@@ -305,8 +323,14 @@ footer.hide {
 }
 
 #instructions.show {
+
   display: contents;
   height: 50rem;
+  overflow-y: hidden;
+}
+
+#instructions.show>p {
+  width: 80%;
   overflow-y: scroll;
 }
 
@@ -334,6 +358,7 @@ footer.hide {
   box-shadow: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  font-size: 1.4rem;
 }
 
 #comment {

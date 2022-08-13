@@ -16,7 +16,7 @@ const renderPopUp = (ID, data) => {
   const modal = `
   <div class="modal">
   <h2>${title}</h2>
-  <span id="closeModalBtn">back to <br> list</span>
+  <span id="closeModalBtn"><i class="fa-solid fa-xmark"></i></span>
   <div class="modalTop">
     <img src="${imageSrc}" alt="${title}">
     <div id="ingredientsWrap">
@@ -25,11 +25,16 @@ const renderPopUp = (ID, data) => {
     </div>  
   </div>
   <div class="instructionsWrap">
-  <h3>Instructions &nbsp; <button id="instructionsBtn"><i class="fa-solid fa-angle-down"></i></button></h3>
-    <p id="instructions">${instructions}</p>
+    <div id="instructionsTop">
+      <h3>Instructions</h3>
+      <button id="instructionsBtn"><i class="fa-solid fa-angle-down"></i></button>
+    </div>
+    <div id="instructions">
+      <p>${instructions}</p>
+    </div>
   </div>
   <form class="form">
-  <h3>Be the first to leave a comment!</h3>
+    <h3>Be the first to leave a comment!</h3>
     <input type="text" placeholder="Your Name">
     <textarea id="comment" placeholder="Write here..."></textarea>
     <button id="${ID}" type="button">Comment</button>
