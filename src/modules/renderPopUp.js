@@ -5,7 +5,11 @@ const renderPopUp = (ID, data) => {
   const ingredients = data[2]; // array
   const quantities = data[3]; // array
   const instructions = data[4];
-  // const comments = getComments(ID); //array -- next part of project
+  const comments = data[5];
+  let commentCounter = 0;
+  if (data[5].length) {
+    commentCounter = data[5].length; // array
+  }
 
   // start creating html -------------------------
   const main = document.getElementById('main');
@@ -33,11 +37,16 @@ const renderPopUp = (ID, data) => {
       <p>${instructions}</p>
     </div>
   </div>
-  <form id="form">
+
+  <div id="commentsSection">
+    <h3>Comments &nbsp;  (<span id="commentsCounter">${commentCounter}</span>)</h3>
+    <div id="commentsPlaceholder"></div>
+  </div>
+  <form class="form">
     <h3>Be the first to leave a comment!</h3>
-    <input type="text" placeholder="Your Name">
-    <textarea id="comment" placeholder="Write here..."></textarea>
-    <button id="${ID}" type="button">Comment</button>
+    <input id="userName" type="text" placeholder="Your Name">
+    <textarea id="commentArea" placeholder="Write here..."></textarea>
+    <button id="${ID}" class="commentBtn" type="button">Comment</button>
   </form>
 </div>
 `;
@@ -51,6 +60,19 @@ const renderPopUp = (ID, data) => {
     li.innerHTML = `<span>${quantities[i]}</span>${ingredient}`;
     ingredientsUl.appendChild(li);
   });
+
+  // comments
+  if (comments.length) {
+    const commentsPlaceholder = document.getElementById('commentsPlaceholder');
+    comments.forEach((comment) => {
+      const commentCard = `<div class="commentCard">
+                          <h3 id="commenter">${comment.username}</h3>
+                          <span id="commentDate">${comment.creation_date}</span>
+                          <p id="comment">${comment.comment}</p>
+                        </div>`;
+      commentsPlaceholder.innerHTML += commentCard;
+    });
+  }
 };
 
 export default renderPopUp;

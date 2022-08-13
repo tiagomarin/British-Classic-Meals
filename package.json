@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage --watch",
     "start": "webpack serve --open",
     "build": "webpack"
   },
@@ -18,15 +18,26 @@
   "bugs": {
     "url": "https://github.com/basitali111/To-Do-list-list-structure/issues"
   },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
   "homepage": "https://github.com/basitali111/To-Do-list-list-structure#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@babel/preset-env": "^7.18.10",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^28.1.3",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.26.0",
     "hint": "^7.1.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",

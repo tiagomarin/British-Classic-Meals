@@ -1,31 +1,29 @@
 import './style.css';
+
 import loadPage from './modules/loadPage';
+import displayPopUp from './modules/displayPopUp';
 import getDetails from './modules/getDetails';
 import renderPopUp from './modules/renderPopUp';
 import clearPopUp from './modules/clearPopUp';
+import saveNewComment from './modules/saveNewComment';
 import postLikes from './modules/postLikes';
 import logo from './assets/logo.png';
 
 document.getElementById('logo').src = logo;
 
-
 loadPage(); // load page
 
 // EVENT LISTENERS ---------------------------------
-// open modal button
+// details button
 window.addEventListener('click', (e) => {
   if (e.target.className === 'recipeBtn') {
     const mealID = e.target.parentElement.parentElement.id;
-    const displayPopUp = async () => {
-      const data = await getDetails(mealID);
-      renderPopUp(mealID, data);
-    };
-    displayPopUp();
-    // document.getElementsByTagName('footer').className.add('hide')
+    displayPopUp(mealID);
   }
 });
 
-// close modal button
+// close details button
+
 window.addEventListener('click', (e) => {
   if (e.target.parentElement.id === 'closeModalBtn' || e.target.id === 'modalContainer') {
     clearPopUp();
@@ -64,5 +62,14 @@ window.addEventListener('click', async (e) => {
       e.target.nextSibling.innerHTML = likeCount;
     }
     await postLikes(mealID, likeCount);
+  }
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target.className === 'commentBtn') {
+    const mealID = e.target.id;
+    const userName = document.getElementById('userName').value;
+    const comment = document.getElementById('commentArea').value;
+    saveNewComment(mealID, userName, comment);
   }
 });
