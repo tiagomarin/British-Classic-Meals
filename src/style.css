@@ -110,11 +110,11 @@ main {
   justify-content: center;
 }
 
-.mealCard > * {
+.mealCard>* {
   width: 90%;
 }
 
-.mealCard > img {
+.mealCard>img {
   margin-top: 1rem;
 }
 
@@ -133,7 +133,7 @@ main {
   justify-content: space-between;
 }
 
-.title > h3 {
+.title>h3 {
   width: 75%;
 }
 
@@ -172,7 +172,7 @@ footer {
   justify-content: center;
 }
 
-footer > p {
+footer>p {
   font-size: 1rem;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 0 2rem;
@@ -198,7 +198,7 @@ footer.hide {
 }
 
 .modal {
-  width: 80%;
+  width: 85%;
   height: 85%;
   position: relative;
   overflow-y: auto;
@@ -211,7 +211,7 @@ footer.hide {
   background-size: 100%;
 }
 
-.modal > h2 {
+.modal>h2 {
   width: 60%;
   text-align: center;
   font-size: 2rem;
@@ -226,7 +226,7 @@ footer.hide {
 }
 
 .modalTop {
-  width: 80%;
+  width: 88%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,11 +234,11 @@ footer.hide {
   gap: 2rem;
 }
 
-.modalTop > img {
+.modalTop>img {
   width: 100%;
 }
 
-.modalTop > h3 {
+.modalTop>h3 {
   margin-bottom: 0.2rem;
 }
 
@@ -270,13 +270,13 @@ footer.hide {
 }
 
 #instructionsTop {
-  width: 80%;
+  width: 88%;
   display: flex;
   justify-content: space-between;
 }
 
-#instructionsTop > h3 {
-  width: 80%;
+#instructionsTop>h3 {
+  width: 88%;
 }
 
 #instructionsBtn {
@@ -299,51 +299,62 @@ footer.hide {
   overflow-y: hidden;
 }
 
-#instructions.show > p {
-  width: 80%;
+#instructions.show>p {
+  width: 88%;
   overflow-y: scroll;
 }
-
-#form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
 
 #commentArea {
   height: 8rem;
 }
 
 #commentsSection {
-  width: 80%;
+  width: 88%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: cadetblue;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
-#commentsSection > h3 {
+#commentsSection>h3 {
   margin-bottom: 3rem;
 }
 
 #commentsPlaceholder {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 0.3rem;
+  overflow-y: scroll;
 }
 
 .commentCard {
-  width: 80%;
+  width: 95%;
+  height: max-content;
   border: 1px solid #000;
-  background-color: rgb(250, 250, 250);
-  padding: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 50px 30px #3d3d3d inset;
+  -moz-box-shadow: 0 0 5px 2px #3d3d3d inset;
+  box-shadow: 0 0 5px 2px #3d3d3d80 inset;
+  border: none;
+  background-color: rgba(250, 250, 250, 0.7);
+}
 
-#form > * {
+#comment {
+  height: max-content;
+}
+
+#form {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#form>* {
   padding: 0.4rem 1.2rem;
   width: 100%;
   border-radius: 5px;
@@ -354,7 +365,7 @@ footer.hide {
   background-color: transparent;
 }
 
-#form > h3 {
+#form>h3 {
   width: 60%;
   padding: 0;
   box-shadow: none;
@@ -363,11 +374,7 @@ footer.hide {
   font-size: 1.4rem;
 }
 
-#comment {
-  height: 8rem;
-}
-
-#form > button {
+#form>button {
   width: max-content;
   align-self: flex-end;
 }
@@ -442,7 +449,7 @@ footer.hide {
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  footer > p {
+  footer>p {
     font-size: 1.4rem;
     border-radius: 6px;
   }
@@ -474,7 +481,7 @@ footer.hide {
     gap: 2rem;
   }
 
-  .modalTop > img {
+  .modalTop>img {
     width: 50%;
   }
 
@@ -495,17 +502,17 @@ footer.hide {
     gap: 2rem;
   }
 
-  .modalTop > ul > li > span {
+  .modalTop>ul>li>span {
     margin-right: 1rem;
   }
 
   #instructionsTop {
-    width: 80%;
+    width: 88%;
     display: flex;
     justify-content: flex-start;
   }
 
-  #instructionsTop > h3 {
+  #instructionsTop>h3 {
     width: max-content;
   }
 
@@ -523,19 +530,19 @@ footer.hide {
     overflow-y: hidden;
   }
 
-  #instructions.show > p {
-    width: 80%;
+  #instructions.show>p {
+    width: 88%;
     overflow-y: scroll;
   }
 
   #form {
-    width: 80%;
+    width: 88%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
 
-  #form > * {
+  #form>* {
     padding: 0.4rem 1.2rem;
     width: 100%;
     border-radius: 5px;
@@ -546,7 +553,7 @@ footer.hide {
     background-color: transparent;
   }
 
-  #form > h3 {
+  #form>h3 {
     width: 60%;
     padding: 0;
     box-shadow: none;
@@ -559,7 +566,7 @@ footer.hide {
     height: 8rem;
   }
 
-  #form > button {
+  #form>button {
     width: max-content;
     align-self: flex-end;
   }

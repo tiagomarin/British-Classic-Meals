@@ -2,8 +2,6 @@ import './style.css';
 
 import loadPage from './modules/loadPage';
 import displayPopUp from './modules/displayPopUp';
-import getDetails from './modules/getDetails';
-import renderPopUp from './modules/renderPopUp';
 import clearPopUp from './modules/clearPopUp';
 import saveNewComment from './modules/saveNewComment';
 import postLikes from './modules/postLikes';
@@ -22,7 +20,7 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// close details button
+// close details buttons
 
 window.addEventListener('click', (e) => {
   if (e.target.parentElement.id === 'closeModalBtn' || e.target.id === 'modalContainer') {

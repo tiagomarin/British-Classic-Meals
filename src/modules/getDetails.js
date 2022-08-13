@@ -2,6 +2,9 @@ import getComments from './getComments';
 
 const getDetails = async (mealID) => {
   const comments = await getComments(mealID);
+  if(comments){
+    
+  }
   try {
     const response = await fetch(`https://themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`);
     const data = await response.json();

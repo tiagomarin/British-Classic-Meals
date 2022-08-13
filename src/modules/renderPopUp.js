@@ -42,8 +42,7 @@ const renderPopUp = (ID, data) => {
     <h3>Comments &nbsp;  (<span id="commentsCounter">${commentCounter}</span>)</h3>
     <div id="commentsPlaceholder"></div>
   </div>
-  <form class="form">
-    <h3>Be the first to leave a comment!</h3>
+  <form id="form">
     <input id="userName" type="text" placeholder="Your Name">
     <textarea id="commentArea" placeholder="Write here..."></textarea>
     <button id="${ID}" class="commentBtn" type="button">Comment</button>
