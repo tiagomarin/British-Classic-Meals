@@ -1,5 +1,5 @@
 {
-  "name": "to-do-list-list-structure",
+  "name": "british-classic-meals",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -11,18 +11,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/basitali111/To-Do-list-list-structure.git"
+    "url": "git+https://github.com/Tiago-Lelinski-Marin/British-Classic-Meals.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/basitali111/To-Do-list-list-structure/issues"
+    "url": "https://github.com/Tiago-Lelinski-Marin/British-Classic-Meals/issues"
   },
-  "homepage": "https://github.com/basitali111/To-Do-list-list-structure#readme",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "homepage": "https://tiago-lelinski-marin.github.io/British-Classic-Meals/dist/index",
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@babel/preset-env": "^7.18.10",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^28.1.3",
     "css-loader": "^6.7.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
